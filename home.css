@@ -145,8 +145,8 @@ header {
     letter-spacing: 2px;
 }
 .info h1{
-    font-size: 45px;
-    line-height: 50px;
+    font-size: clamp(32px, 4vw, 45px);
+    line-height: 1.1;
 
 }
 .info > p:nth-of-type(2){
@@ -165,9 +165,11 @@ header {
     gap: 16px;
 }
 .hero-buttons a{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 180px;
     text-align: center;
     padding: 12px 20px;
     border: 1px solid #087243;
@@ -185,6 +187,8 @@ header {
     animation-delay: 140ms;
 }
 .hero-buttons a span{
+    width: 100%;
+    text-align: center;
     animation: button-label-arrive 500ms 120ms both;
 }
 .hero-buttons a:nth-child(2) span{
@@ -204,6 +208,8 @@ header {
     outline-offset: 3px;
 }
 .hero-buttons a img{
+    position: absolute;
+    left: 20px;
     width: 20px;
     transition: transform 200ms ease;
 }
