@@ -27,7 +27,7 @@
             </a>
           </div>
           <div class="page-links">
-            <a href="#">
+            <a href="recycling.html">
               <img src="./Icons/Green recycle.svg" alt="Report-icon">
               <p>Recycling</p>
             </a>
@@ -221,14 +221,19 @@
               </div>
               <div class="form-group">
                 <label for="photo">Add Photo (optional)</label>
-                <label for="photo" class="upload-area">
-                  <img src="./Icons/cloud-arrow-up-solid-full.svg" alt="Upload arrow">
-                  <span>
-                    <strong>Click to upload or drag and drop</strong>
-                    <small>JPG, PNG (Max 5MB)</small>
-                  </span>
-                </label>
-                <input type="file" id="photo" name="photo" accept="image/jpeg,image/png" hidden>
+                <div id="photo" class="upload-box" onclick="document.getElementById('fileInput').click();">
+                  <div class="upload-image">
+                    <img class="upload-image" src="./Icons/cloud-arrow-up-solid-full.svg" alt="Upload arrow">
+                  </div>                  
+                  <div class="upload-text">
+                    <span class="upload-info">
+                      <h3>Click to upload</h3>
+                      <span> or drag and drop </span>
+                    </span>                     
+                    <div class="upload-subtext">JPG, PNG (Max 5MB)</div>
+                  </div>
+                </div>
+                <input type="file" id="fileInput" style="display: none;" accept=".jpg,.png">
               </div>
               <button type="submit" class="submit-button">
                 <img src="./Icons/paper-plane-solid-full.svg" alt="">
@@ -237,6 +242,7 @@
 
             </form>
           </section>
+        </section>
       </main>
       <footer>
         <div class="footer-logo">
