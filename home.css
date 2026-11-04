@@ -31,6 +31,10 @@ header {
     padding: 10px 58px;
     background-color: white;
     margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 .ecosmart-logo{
     height: 100%;
@@ -129,6 +133,7 @@ header {
     min-height: 460px;
     overflow: hidden;
     background-color: #FBFDFB;
+    padding-top: 110px;
 }
 .info{
     display: flex;

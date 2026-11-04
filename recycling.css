@@ -34,6 +34,10 @@ header {
     padding: 10px 58px;
     background-color: white;
     margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 .ecosmart-logo{
     height: 100%;
@@ -54,6 +58,7 @@ header {
 main{
     width: 100%;
     min-width: 0;
+    padding-top: 110px;
 }
 .page-links{
     display: flex;
@@ -252,20 +257,29 @@ main{
     margin: 0;
     background-color: #F2F8F3;
 }
-.quick-actions p:first-child{
+.quick-actions p:first-child,
+#recycle-education p:first-child{
     font-size: 12px;
     color: #087243;
     font-weight: bold;
 }
-.quick-actions h2{
+.quick-actions h2,
+#recycle-education h2{
     font-size: 18px;
     color: #0c442a;
 }
-.quick-actions p:nth-of-type(2){
+.quick-actions p:nth-of-type(2),
+#recycle-education p:nth-of-type(2){
     font-size: 10px;
     color: #087243;
     font-weight: 500;
     margin-bottom: 20px;
+}
+#recycle-education p:nth-of-type(2){
+    font-size: 13px;
+    width: 370px;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 #learn-more{
     display: grid;
@@ -351,7 +365,8 @@ main{
     width: 100%;
     min-width: 0;
 }
-.quick-sections-content a{
+.quick-sections-content a,
+.recycling-learnMore a{
     font-size: 12px;
     color: #087243;
     text-decoration: none;
@@ -362,21 +377,112 @@ main{
     gap: 5px;
     transition: color 180ms ease, gap 180ms ease;
 }
-.quick-sections-content a:hover{
+.recycling-learnMore a{
+  font-size: 11px;
+}
+.quick-sections-content a:hover,
+.recycling-learnMore a:hover{
     color: #064b2b;
     gap: 9px;
 }
-.quick-sections-content a span{
+.quick-sections-content a span,
+.recycling-learnMore a span{
         font-weight: 900;
         transition: transform 180ms ease;
 }
-.quick-sections-content a:hover span{
+.quick-sections-content a:hover span,
+.recycling-learnMore a:hover span{
     transform: translateX(2px);
 }
-
-
-
-
+#recycle-education{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    overflow: hidden; 
+    font-family: "Poppins", sans-serif;
+    padding: 20px 30px;
+    margin: 0;
+    background-color: rgb(233, 250, 234);
+}
+#recycling-infoText-learnMore{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* gap: 10px; */
+}
+.process-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;    
+}
+.process-steps{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+}
+.process-steps:first-child .step-info p{
+  width: 150px;
+}
+.step-number{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #064b2b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+.step-icon img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.step-info{
+  display: flex;
+  flex-direction: column;
+  color: #064b2b;
+}
+.step-info h6{
+  font-size: 15px;
+  color: #328042;
+}
+.step-info p{
+  font-size: 12px;
+  width: 170px;
+  font-weight: 500;
+}
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow img {
+    width: 20px;
+    height: auto;
+    display: block;
+}
+#smallActions-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  width: 100%;
+}
+.smallActions-bigImpact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
 
 
