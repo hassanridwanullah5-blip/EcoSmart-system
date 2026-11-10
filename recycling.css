@@ -103,8 +103,11 @@ main{
     transform-origin: center;
     transition: transform 180ms ease;
 }
-.page-links img{
-    width: 22px;
+.page-links i{
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .page-links a{
     text-decoration: none;
@@ -113,6 +116,9 @@ main{
     color: rgb(33, 75, 33);
     font-family: "Poppins", sans-serif;
     font-size: 12px;
+}
+.page-links p{
+    font-size: 10px;
 }
 .page-links a:hover,
 .page-links a:focus-visible{
@@ -135,8 +141,11 @@ main{
     align-items: center;
     height: 80%;
 }
-.menu img{
+.menu i{
     width: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .hero-section{
     display: grid;
@@ -166,7 +175,8 @@ main{
 .info h1{
     font-size: clamp(32px, 4vw, 45px);
     line-height: 1.1;
-    width: 200px;
+    width: 100%;
+    max-width: 460px;
 }
 .info > p:nth-of-type(2){
     max-width: 420px;
@@ -207,9 +217,12 @@ main{
     background-color: #064b2b;
     padding: 5px;
 }
-.secured-health-icon img{
+.secured-health-icon i{
     width: 25px;
     height: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .hero-image{
     min-width: 0;
@@ -344,9 +357,12 @@ main{
     background-color: #087243;
     transform: translateY(-4px) rotate(-8deg);
 }
-.circle-icon img{
+.circle-icon i{
     width: 22px;
     height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     object-fit: contain;
 }
 .quick-sections-content{
@@ -420,7 +436,7 @@ main{
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    width: 100%;    
+    width: 100%;
 }
 .process-steps{
     display: flex;
@@ -443,9 +459,12 @@ main{
     font-size: 10px;
     font-weight: bold;
 }
-.step-icon img{
+.step-icon i{
     width: 30px;
     height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     object-fit: contain;
 }
 .step-info{
@@ -467,7 +486,7 @@ main{
     align-items: center;
     justify-content: center;
 }
-.arrow img {
+.arrow i {
     width: 20px;
     height: auto;
     display: block;
@@ -476,7 +495,8 @@ main{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px 10px 30px;
+  gap: 20px;
+  padding: 15px 15px 15px 30px;
   width: 100%;
   background-color: rgb(225, 241, 227);
   border-radius: 15px;
@@ -487,7 +507,8 @@ main{
   justify-content: start;
   align-items: center;
   gap: 15px;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
 }
 .smallActions-icon{
     width: 50px;
@@ -496,9 +517,12 @@ main{
     border-radius: 50%;
     padding: 10px;
 }
-.smallActions-icon img{
+.smallActions-icon i{
     width: 100%;
     height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     object-fit: contain;
 }
 .smallActions-text{
@@ -529,19 +553,24 @@ main{
     justify-content: center;
     align-items: center;
     background-color: #064b2b;
-    padding: 5px 15px;
+    padding: 10px 15px;
     border-radius: 10px;
-    width: 300px;
+    width: 230px;
+    flex: 0 0 auto;
     gap: 5px;
 }
 .findRecycle-button:hover{
     background-color: #087243;
     box-shadow: 0 4px 10px rgba(6, 75, 43, 0.2);
-    transform: translateY(-5px);
-    transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    transform: translateY(-3px);
+    transition: background-color 180ms ease, box-shadow 180ms ease;
+    transition: transform 0.4s ease;
 }
-.findRecycle-button img{
+.findRecycle-button i{
     width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -601,13 +630,21 @@ footer{
 .footer-icons a{
   display: flex;
   justify-content: center;
-  align-items: end;
-  background-color: white;
+  align-items: center;
   border-radius: 50%;
-  padding: 5px;  
+  width: 35px;
+  height: 35px;
+  text-decoration: none;
 }
-.footer-icons a img{
+.footer-icons a i{
     width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1;
+    color: #064b2b;
 }
 #media-info p{
   font-size: 10px;
@@ -641,7 +678,7 @@ footer{
         grid-row: 1;
         justify-self: end;
     }
-    .hero{
+    .hero-section{
         grid-template-columns: minmax(0, 1fr);
     }
     .info{
@@ -713,6 +750,14 @@ footer{
         flex-direction: column;
         height: auto;
         padding: 0;
+    }
+    #smallActions-button{
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+    .findRecycle-button{
+        width: 100%;
     }
     .contact-info a + a{
         border-left: 0;

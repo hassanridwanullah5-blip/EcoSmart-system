@@ -95,8 +95,11 @@ header {
     transform-origin: center;
     transition: transform 180ms ease;
 }
-.page-links img{
-    width: 22px;
+.page-links i{
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .page-links a{
     text-decoration: none;
@@ -105,6 +108,9 @@ header {
     color: rgb(33, 75, 33);
     font-family: "Poppins", sans-serif;
     font-size: 12px;
+}
+.page-links p{
+    font-size: 10px;
 }
 .page-links a:hover,
 .page-links a:focus-visible{
@@ -127,8 +133,11 @@ header {
     align-items: center;
     height: 80%;
 }
-.menu img{
+.menu i{
     width: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .hero{
     display: grid;
@@ -197,7 +206,7 @@ header {
     animation-delay: 140ms;
 }
 .hero-buttons a span{
-    width: 100%;
+    width: auto;
     text-align: center;
     animation: button-label-arrive 500ms 120ms both;
 }
@@ -217,14 +226,15 @@ header {
     outline: 2px solid #087243;
     outline-offset: 3px;
 }
-.hero-buttons a img{
-    position: absolute;
-    left: 20px;
-    width: 20px;
+.hero-buttons a i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 20px;
     transition: transform 200ms ease;
 }
-.hero-buttons a:hover img,
-.hero-buttons a:focus-visible img{
+.hero-buttons a:hover i,
+.hero-buttons a:focus-visible i{
     transform: scale(1.12);
 }
 .hero-buttons a:first-child{
@@ -327,9 +337,12 @@ header {
     background-color: #087243;
     transform: translateY(-4px) rotate(-8deg);
 }
-.circle-icon img{
+.circle-icon i{
     width: 22px;
     height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     object-fit: contain;
 }
 .quick-sections-content{
@@ -423,13 +436,21 @@ footer{
 .footer-icons a{
   display: flex;
   justify-content: center;
-  align-items: end;
-  background-color: white;
+  align-items: center;
   border-radius: 50%;
-  padding: 5px;  
+  width: 35px;
+  height: 35px;
+  text-decoration: none;
 }
-.footer-icons a img{
+.footer-icons a i{
     width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1;
+    color: #064b2b;
 }
 #media-info p{
   font-size: 10px;
